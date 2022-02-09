@@ -1,0 +1,214 @@
+/* GENERAL */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family:'Noto Sans JP', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/* HEADER */
+
+.nav1{
+  width: 100%;
+  height: 80px;
+  background: #000;
+  position: sticky;  
+  top:0;
+}
+
+.logo{
+  color:#fff;
+  font-size:40px;
+  margin-left:30px;
+  line-height: 80px;
+  letter-spacing: .1rem;
+}
+
+ul{
+  float:right;
+  margin-right: 50px;
+  line-height: 80px;
+}
+
+ul li{
+  display: inline-block;
+  text-transform: capitalize;
+  padding:5px;
+}
+
+ul li a{
+  text-decoration: none;
+  color:white;
+  font-size:17px;
+  padding: 10px;
+  text-transform: uppercase; 
+}
+
+.home,a:hover{
+  background:rgb(62, 80, 243);
+  transition: .7s ease;
+  border-radius: 12px;
+}
+
+#check{
+  display: none;
+}
+
+#check-btn{
+  color: #fff;
+  font-size: 30px;
+  float:right;  
+  display: none;
+  margin:20px;
+}
+
+.img_nav{
+  /* background:url(https://image.freepik.com/foto-gratis/eleccion-iconos-aplicaciones-moviles_1098-18639.jpg?w=740) no-repeat; */
+  background:url(https://image.freepik.com/foto-gratis/transformacion-digital-conceptual-era-tecnologica-proxima-generacion_109643-131.jpg?w=900);
+  background-position: center;
+  background-size:cover;
+  height: 100vh;
+}
+
+/*  MAIN */
+
+main{
+  min-height: 100vh;
+}
+
+.container{
+  max-width: 1000px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin:auto;
+}
+
+.content .title{
+  font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	padding-top: 40px;
+  text-transform: capitalize;
+  line-height: 25px;
+}
+
+.content .fecha{
+  font-size: 12px;
+  line-height:40px;
+	color: #cac7c7;
+}
+  
+.content p{
+  margin-bottom: 10px;
+	line-height: 30px;
+	color: #525151;
+  text-align: justify;
+}
+
+aside{
+  min-width: 20%;
+  height: 100%;
+  background: #1D2F3D;
+  margin: 40px 20px 20px 0;
+  padding: 20px;
+  position: sticky;
+  top:20;
+  border-radius:5px;
+}
+
+aside .indice{
+  background: #1D2F3D;
+  margin-left:10px;
+}
+
+aside .title{
+
+  padding: 5px;
+  margin:10px;
+  color:#fff;
+  font-weight: normal;
+  font-size:20px;
+}
+
+aside .indice a{
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  font-size:16px;
+  color:rgb(243, 164, 45);
+  line-height: 8px;
+}
+
+
+/* FOOTER */
+
+footer img{
+  width: 100%;
+  height: 100vh;
+}
+
+footer .nav1{
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:700px){
+  .logo{  
+    font-size:35px;
+    color:#000
+  }
+
+  #check-btn{
+    display: block;
+    color:#000;
+  }
+
+  nav{
+    background:#fff;
+  }
+
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    text-align: center;
+    left:-100%;
+    top:80px;
+    transition: all .5s ease;
+  }
+
+  ul li{
+    display: block;
+    margin:30px;
+    line-height: 80px; 
+  }
+  
+  a.home , a:hover{
+    background: none;
+    color:rgb(62, 80, 243)
+  }
+  
+  ul li a{
+    letter-spacing: .1rem;
+    font-family:monospace;
+    font-weight: bold;
+    font-size:20px;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }  
+}
