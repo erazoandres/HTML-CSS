@@ -14,11 +14,11 @@ body{
 html{
   scroll-behavior: smooth;
 }
+
 /* HEADER */
 
 .nav1{
   width: 100%;
-  height: 80px;
   background: #000;
   position: sticky;  
   top:0;
@@ -67,12 +67,12 @@ ul li a{
   font-size: 30px;
   float:right;  
   display: none;
-  margin:20px;
+  margin: 10px;
 }
 
 .img_nav{
   /* background:url(https://image.freepik.com/foto-gratis/eleccion-iconos-aplicaciones-moviles_1098-18639.jpg?w=740) no-repeat; */
-  background:url(https://image.freepik.com/foto-gratis/transformacion-digital-conceptual-era-tecnologica-proxima-generacion_109643-131.jpg?w=900);
+  background:url(https://digitalisthub.com/wp-content/uploads/2017/02/disenoweb.jpg);
   background-position: center;
   background-size:cover;
   height: 100vh;
@@ -81,15 +81,20 @@ ul li a{
 /*  MAIN */
 
 main{
-  min-height: 100vh;
+  /* min-height: 100%;   */
 }
 
 .container{
-  max-width: 1000px;
   width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin:auto;
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+.container .post{
+  margin-bottom: 50px;
 }
 
 .content .title{
@@ -98,30 +103,37 @@ main{
 	padding-top: 40px;
   text-transform: capitalize;
   line-height: 25px;
+
+  padding: 10px;
+  margin: 10px;
 }
 
 .content .fecha{
   font-size: 12px;
-  line-height:40px;
 	color: #cac7c7;
+  padding: 10px;
+  margin-top: -25px;
 }
   
 .content p{
   margin-bottom: 10px;
-	line-height: 30px;
+	line-height: 25px;
 	color: #525151;
   text-align: justify;
+  margin: 10px;
+  margin-top:-15px;
+  padding: 10px;
 }
 
 aside{
-  min-width: 20%;
+  min-width: 25%;
   height: 100%;
   background: #1D2F3D;
-  margin: 40px 20px 20px 0;
-  padding: 20px;
   position: sticky;
   top:20;
   border-radius:5px;
+  padding: 15px;
+
 }
 
 aside .indice{
@@ -131,7 +143,7 @@ aside .indice{
 
 aside .title{
 
-  padding: 5px;
+  padding: 10px;
   margin:10px;
   color:#fff;
   font-weight: normal;
@@ -148,6 +160,57 @@ aside .indice a{
   line-height: 8px;
 }
 
+/* TARGETS */
+.container_targets{
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom:40px;
+  display: flex;
+  justify-content:space-around;
+}
+
+.target{
+  min-width: 30%;
+  height: 100%;
+  padding:10px;
+  margin: 10px;
+  transition: .2s ease;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  border-radius: 2%;
+}
+
+.target .img{
+  height: 300px;
+  background-image: url(picture_header.png);
+  background-size: cover;
+  background-position:center;
+  border-radius: 2%;
+}
+
+.container_targets .target:nth-child(1) .img{
+  background:url(https://cetrexmarketing.com/wp-content/uploads/2019/04/cetrex-marketing-que-es-marketing-digital-500x300.jpg);
+}
+
+.container_targets .target:nth-child(2) .img{
+  background:url(https://luminenzia.com/wp-content/uploads/2021/07/desarrollo-web-500x300-1.jpg);
+}
+
+.container_targets .target:nth-child(3) .img{
+  background:url(https://www.posicionamiento-webs.com/wp-content/uploads/2018/06/Elementos-que-marcan-la-ruta-del-marketing-digital-exitoso-500x300.jpg);
+  
+}
+
+.target div p{
+  text-align: justify;
+  padding: 10px;
+  margin-top:15px;
+  font-size: .9rem;
+}
+
+.target:hover{
+  transform: translateY(-6%);
+}
 
 /* FOOTER */
 
@@ -161,22 +224,38 @@ footer .nav1{
   bottom: 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+}
+
+label span{
+  font-size: 20px;
+  
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width:700px){
+@media screen and (max-width:780px){
   .logo{  
     font-size:35px;
-    color:#000
+    color:#fff;
   }
 
   #check-btn{
     display: block;
-    color:#000;
+    color:#fff;
+    margin: 20px;
   }
 
   nav{
     background:#fff;
+  }
+
+  
+  .container aside nav a{
+    font-size: 13px;
+  }
+
+  .container aside{
+    width: 20%;
   }
 
   ul{
@@ -211,4 +290,49 @@ footer .nav1{
   #check:checked ~ ul{
     left: 0;
   }  
+}
+
+@media screen and (max-width:600px){
+
+  .container_targets{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container aside{
+    position: static;
+    background-color:#000;
+    width: 40%;
+    text-align: center;
+  }
+
+  .container aside .indice{
+    background: #000;
+    margin-left: 0;
+      
+  }
+
+  .container aside nav a{
+    color:#fff;
+    margin: 10px;
+    font-size: 15px;
+  }
+
+  .container aside .title{
+    color:rgb(59, 59, 204);
+  }
+
+  .imagen_footer{
+    display: none;
+  }
+
+  .img_nav{
+    height: 30vh;
+  }
+
 }
