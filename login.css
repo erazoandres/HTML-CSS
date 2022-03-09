@@ -1,121 +1,176 @@
-body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh;
-    padding: 0;
+*{
     margin: 0;
-    background:linear-gradient(120deg , #141318c7 , rgba(3, 1, 10, 0.993))
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.login-container{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 350px;
-    background:#fff;
-    border-radius: 15px;
-}
-
-.login-container h1{
-    text-align: center;
-    text-transform: uppercase;
-    border-bottom:1px solid silver;
-    padding-bottom: 10px;
-}
-
-.login-container form{
-    padding: 0 40px;
-}
-
-.login-container .mini-container{
-    position: relative;
-    margin: 30px 0;
-    border-bottom: 2px solid #adadad;
-}
-
-.mini-container input{
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 0 5px;
-    border:none;
-    background:none;
-    outline:none;
-    height: 40px;
-    font-size: 16px;
+    height: 100vh;
+
+    background: rgba(0,0,0,.1);
 }
 
-.login-container label{
-    position: absolute;
-    top:50%;
-    left: 5px;
-    color:#adadad;
-    transform: translateY(-50%);
-    text-transform: capitalize;
-    font-size: 16px;
-    transition: .2s;
+.container{
+
+    background: rgba(255,255,255,.5);
+    display: flex;
+    box-shadow: 4px 4px 10px rgba(22, 12, 12, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 20px;
+    margin: 20px;
 }
 
-.forgot{
-    margin: -5px 0 20px 5px;
-    text-transform: capitalize;
-    color:#a6a6a6;
-    cursor: pointer;
-}
-
-.forgot a{
-    text-decoration: none;
-}
-
-.forgot a:hover{
-    text-decoration: underline;
-}
-
-.login-container input[type="submit"]{
-    width: 100%;
+.login{
+    width:70%;
+    margin: 0 10px;
     padding: 10px;
-    background:rgb(43, 96, 243);
-    color:#fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    border:1px solid;
-    border-radius: 25px;
+
+    filter:none !important;
 }
 
-.login-container input[type="submit"]:hover{
-    border-color:rgb(33, 76, 196);
-    transition: .2s;
+form{
+    width: 300px;
+    padding: 10px;
+    height: 100%;
+    margin:0 auto;
 }
 
-.not-member{
-    padding: 15px 0;
-    text-align: center;
+form h2{
+    text-transform: capitalize;
+    font-size: 25px;
+    cursor: default;
+    margin-bottom: 40px;
 }
 
-.not-member a{
+form a{
+    font-size: 13px;
     text-decoration: none;
+    color:rgba(0,0,0,0.7);
 }
 
-.not-member a:hover{
+form a:hover{
     text-decoration: underline;
 }
 
-.mini-container span::before{
-    content: '';
-    position: absolute;
-    top:40px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background:#2691d9;
-    transition: .5s;
+.logo{
+    max-width: 120px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: auto;
 }
 
-
-.mini-container input:focus ~ label{
-    top:-5px;
-    /* color:#fff; */
-    color:#2691d9;
+.logo img{
+    max-width: 100%;
+    height: 100px;
 }
 
-.mini-container input:focus ~ span::before{
-    width: 100%;
+.entrada{
+    margin:5px 0;
+    padding: 5px;
+    position: relative;    
+}
+
+label{
+
+    position: relative;
+    text-transform: capitalize;
+    top: -55px;
+    font-size: 13px;
+    color: rgba(0,0,0,0.5);
+    transition: .3s;
+}
+
+input{
+    width: 80%;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%);    
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+}
+
+input:focus{
+    outline: none;
+}
+
+input:focus ~ label{   
+    color:rgb(70, 123, 238);
+    text-shadow:1px 1px 5px rgb(70, 123, 238);
+}
+
+input:focus ~ .material-icons{
+    color: rgb(70, 123, 238);
+}
+
+#entrada2{
+    margin-top: 20px;
+}
+
+input[type="submit"]{
+    width:90%;
+    margin: 20px 0;
+    padding: 10px;
+    background: rgb(70, 123, 238);
+    color:#fff;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 5px 8px 8px rgba(0,0,0,0.2);
+    border-radius: 4px;    
+    letter-spacing: 1px;
+    cursor:pointer;
+}
+
+input[type="submit"]:hover{
+    text-shadow: 1px 1px 7px white;
+    box-shadow: 5px 8px 8px rgba(0,0,0,.3);
+    transition: .3s ease;
+}
+
+.imagen{
+    background:url("https://cdn.pixabay.com/photo/2011/12/14/12/11/astronaut-11080_960_720.jpg");
+    background-position: center;
+    /* background-size: cover; */
+    width: 300px;
+       
+}
+
+.imagen span{
+    left: 20px;
+}
+
+.material-icons{
+    float: left;
+    width: 30px;
+    height: 35px;
+    background: rgba(0 0 0 /20%);
+    position: relative;
+    box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%);  
+    /* border-radius: 3px; */
+    transition: .3s ease;    
+    padding-left: 3px;
+    padding-top: 5px;    
+}
+
+.imagen span{
+    color:#fff;
+    font-size:.8rem;  
+    position: relative;
+    top:95%;
+}
+
+.container:focus-within{
+    box-shadow: 0 6px 16px 0 rgba(0 0 0 /40%);
+}
+
+.links{
+    margin-left: 10px;
 }

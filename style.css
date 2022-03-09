@@ -18,29 +18,48 @@ html{
 
 .nav1{
   width: 100%;
-  background: #000;
+  background: #0E1428;
   position: sticky;  
   top:0;
+  overflow: hidden;
+  height: 70px;
 }
 
 .logo{
   color:#fff;
   font-size:40px;
   margin-left:30px;
-  line-height: 80px;
+  line-height: 70px;
   letter-spacing: .1rem;
 }
 
 ul{
   float:right;
-  margin-right: 50px;
-  line-height: 80px;
+  line-height: 70px;
 }
 
-ul li{
+ ul li{
   display: inline-block;
   text-transform: capitalize;
   padding:5px;
+  
+}
+
+ul li:last-child{
+  background: #1D2F3D;
+  border-radius: 70deg 90deg 45deg 45deg ;
+  background:#36c9c6;
+}
+
+ul li:last-child:hover a{
+  color:#637074;
+}
+
+
+ ul li:last-child a{
+  font-weight: 700;
+  background: none;
+  transition: .5s ease;
 }
 
 ul li a{
@@ -52,9 +71,9 @@ ul li a{
 }
 
 .home,a:hover{
-  background:rgb(62, 80, 243);
+  background:#D95D39;
   transition: .7s ease;
-  border-radius: 12px;
+  border-radius: 7px;
 }
 
 #check{
@@ -78,10 +97,6 @@ ul li a{
 }
 
 /*  MAIN */
-
-main{
-  /* min-height: 100%;   */
-}
 
 .container{
   width: 90%;
@@ -115,30 +130,30 @@ main{
 }
   
 .content p{
-  margin-bottom: 10px;
+
 	line-height: 25px;
 	color: #525151;
   text-align: justify;
-  margin: 10px;
-  margin-top:-15px;
   padding: 10px;
+  margin: 10px 10px 10px 10px;
 }
 
 aside{
 
-  width: 30%;
-  min-width: 300px;
   height: 100%;
-  background: #1D2F3D;
+  background: #0E1428;
   position: sticky;
-  top:30;
+  top:25;
   border-radius:5px;
-  padding: 15px;
+  margin: 0;
+  padding: 10px;
 }
 
 aside .indice{
-  background: #1D2F3D;
-  margin-left:10px;
+  background: #0E1428;
+  padding: 0 5px;
+  margin: 0 5px;
+  width: 180px;
 }
 
 aside .title{
@@ -152,13 +167,18 @@ aside .title{
 }
 
 aside .indice a{
-  display: block;
+  display: inline-block;
   text-decoration: none;
   padding: 5px;
   margin: 5px;
   font-size:16px;
   color:rgb(243, 164, 45);
-  line-height: 8px;
+  line-height: 8px;  
+}
+
+aside nav a:hover{
+  text-decoration: underline;
+  background:none;
 }
 
 /* TARGETS */
@@ -167,6 +187,7 @@ aside .indice a{
   display: flex;  
   flex-wrap: wrap;
   justify-content:space-around;
+  margin-bottom: 10px;
 }
 
 .container_targets h1{
@@ -184,18 +205,16 @@ aside .indice a{
   text-align: center;
   width: 100%;
   text-transform: uppercase;
-  margin-bottom: 15px;
-
+  margin-bottom: 23px;
 }
-
 
 .target{
   padding:10px;
-  margin: 15px;
+  margin:10px 10px;
   transition: .2s ease;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.7);
   border-radius: 2%;
-  width: 30%;
+  width: 15%;
   min-width: 300px;
 }
 
@@ -206,16 +225,16 @@ aside .indice a{
   border-radius: 2%;
 }
 
-.container_targets .target:nth-last-child(1) .img{
+.target:nth-last-child(1) .img{
   background:url(https://img.freepik.com/foto-gratis/desarrollo-sitios-web_53876-95315.jpg?w=740);
 }
 
-.container_targets .target:nth-last-child(2) .img{
+.target:nth-last-child(2) .img{
   background-image:url(https://cetrexmarketing.com/wp-content/uploads/2019/04/cetrex-marketing-que-es-marketing-digital-500x300.jpg);
 
 }
 
-.container_targets .target:nth-last-child(3) .img{
+.target:nth-last-child(3) .img{
   background-image:url(https://www.posicionamiento-webs.com/wp-content/uploads/2018/06/Elementos-que-marcan-la-ruta-del-marketing-digital-exitoso-500x300.jpg);
 }
 
@@ -234,7 +253,7 @@ aside .indice a{
 
 footer img{
   width: 100%;
-  height: 100vh;
+  height: 70vh;
 }
 
 footer .nav1{
@@ -247,7 +266,6 @@ footer .nav1{
 
 label span{
   font-size: 20px;
-  
 }
 
 /* MEDIA QUERIES */
@@ -267,23 +285,15 @@ label span{
     background:#fff;
   }
 
-    .container aside nav a{
-    font-size: 13px;
-  }
-
-  .container aside{
-    width: 20%;
-  }
-
   ul{
-    position: fixed;
+    position:fixed;
     width: 100%;
     height: 100vh;
     background: #000;
     text-align: center;
     left:-100%;
-    top:80px;
     transition: all .5s ease;
+
   }
 
   ul li{
@@ -291,54 +301,40 @@ label span{
     margin:30px;
     line-height: 80px; 
   }
-  
-  a.home , a:hover{
-    background: none;
-    color:rgb(62, 80, 243)
-  }
-  
-  ul li a{
+
+    ul li a{
     letter-spacing: .1rem;
     font-family:monospace;
     font-weight: bold;
     font-size:20px;
   }
 
+  a.home , a:hover{
+    background: none;
+    color:rgb(62, 80, 243)
+  }
+
   #check:checked ~ ul{
     left: 0;
   }  
-}
-
-@media screen and (max-width:600px){
 
   .container{
     display: flex;
     flex-wrap: wrap;
   }
 
-  .container aside{
-    position: static;
-    background-color:#000;
-    width: 40%;
-    text-align: center;
-    padding: 10px;
-    margin: 20px;
-  }
-
-  .container aside .indice{
+  aside{
     background: #000;
-    margin-left: 0;
-      
+    position: static;
   }
 
-  .container aside nav a{
-    color:#fff;
-    margin: 10px;
-    font-size: 15px;
+  aside .indice{
+    background: #000;
+    width: 110px;
   }
 
-  .container aside .title{
-    color:rgb(59, 59, 204);
+  aside .title{
+    text-align: center;
   }
 
   .imagen_footer{

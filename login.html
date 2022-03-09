@@ -1,41 +1,51 @@
 <html>
     <head>
 
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="login.css" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
     </head>
     <body>
 
-        <div class="login-container">
+      
+        <div class="container">
+            <div class="login">
+                    
+                <form action="">
+                        <div class="logo"><img src="https://seeklogo.com/images/N/NASA-logo-9411797223-seeklogo.com.png" alt="aquilogo" height="80" width="120"></div>
+                        <h2>iniciar sesion</h2>
 
-            <form action="post">
-                <h1>login</h1>
+                        <div class="entrada"> 
+                            
+                            <input type="text" placeholder=" Escriba su email">
+                            <i class="material-icons">people</i>
+                            <label>Usuario</label>
+                        </div>
 
-                <div class="mini-container">
-                    <input type="text">
-                    <span></span>
-                    <label>user</label>
-                </div>
+                        <div class="entrada" id="entrada2">
+                            
+                            <input type="password" placeholder="Escriba su contraseña">
+                            <i class="material-icons">password</i>
+                            <label for="">Contraseña</label>
+                        </div>
 
-                <div class="mini-container">
-                    <input type="password">
-                    <span></span>
-                    <label>password</label>
-                </div>
+                        
+                    <div class="links">
+                        <a href="#">Registrarme</a>
+                        <span>|</span>
+                        <a href="#">¿Olvidaste tu Contraseña?</a>
+                    </div>
+                        <input type="submit">
+                </form>
+            </div>
 
-                <div class="forgot">
-                    ¿olvidaste tu <a href="">contraseña?</a>
-                </div>
-
-                <input type="submit" value="enviar">
-
-                <div class="not-member">
-                    ¿no eres <a href="">miembro?</a>
-                </div>
-            </form>
+        
+            <div class="imagen">
+                <span>Titan's Desings ® 2022</span>
+             </div>
+        
         </div>
-
-
         
     </body>
 </html>
